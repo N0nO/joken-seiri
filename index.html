@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ef">
+  <meta name="description" content="適性検査の条件整理を、条件の読み替えから候補の絞り込みまで練習できる独自の無料2題。">
+  <title>ととのえる｜条件整理の無料練習2題</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header wrap">
+    <a class="brand" href="#" id="home-link" aria-label="ととのえる ホーム"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>ととのえる<span class="brand-sub">条件整理の練習</span></a>
+    <button class="text-button" id="help-button">使い方 <span aria-hidden="true">↗</span></button>
+  </header>
+
+  <main class="wrap">
+
+    <section id="intro" class="intro">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tiny-dot"></span> 無料サンプル · 独自問題2題</div>
+        <h1>「何から考える？」を、<br><span>一手ずつ。</span></h1>
+        <p class="hero-description">文章を図へ。条件を足して、候補をしぼる。<br>答えを選ぶ前の「考える途中」を練習します。</p>
+        <button id="start-button" class="button primary">手順から練習する <span aria-hidden="true">→</span></button>
+        <p class="microcopy">無料 · この画面ですぐに練習できます</p><p class="file-link"><a href="totonoeru-sample-v1.zip" download>PC用の無料ファイルをダウンロード ↓</a><small>ZIPを展開し、START.htmlをブラウザで開きます。</small></p>
+      </div>
+      <div class="hero-board" aria-label="文章の条件を図にして、候補をしぼる練習のイメージ">
+        <div class="paper-label">CONDITION → DIAGRAM</div>
+        <div class="example-sentence"><span class="number-dot">1</span> A は B より前にいる</div>
+        <div class="hero-diagram"><span class="person-token">A</span><span class="dotted-line"><small>間が空いてもよい</small></span><span class="person-token peach">B</span></div>
+        <div class="hero-note"><span aria-hidden="true">✓</span> 「より前」は「すぐ前」とは限らない。</div>
+        <div class="paper-corner" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section id="lesson-picker" class="lesson-picker" aria-label="練習を選ぶ">
+      <button class="lesson-card" id="pick-guided"><span class="lesson-index">01</span><span><strong>手順で練習</strong><small>条件を一つずつ図にする · 3ステップ</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+      <button class="lesson-card" id="pick-solo"><span class="lesson-index muted">02</span><span><strong>自力で確認</strong><small>複数の候補から、必ず言えることを選ぶ</small></span><span class="card-arrow" aria-hidden="true">↗</span></button>
+    </section>
+
+    <section id="offer" class="offer"><div><span class="eyebrow">NEXT PRACTICE · 販売準備中</span><h2>追加の条件整理20題を、500円で。</h2><p>手順の確認、自力演習、誤答の理由を確かめる買い切り教材を準備しています。<br>まずは無料2題で、練習方法が合うか試してください。</p><small>現在、購入・予約の受け付けは行っていません。</small></div></section>
+
+    <section id="practice" hidden aria-labelledby="practice-title">
+      <div class="practice-top"><button class="text-button" id="back-button">← 練習一覧</button><span class="prototype-label">無料サンプル</span></div>
+      <div class="lesson-heading"><div><div class="eyebrow" id="lesson-kicker"></div><h1 id="practice-title"></h1><p id="lesson-summary"></p></div><button id="restart-button" class="text-button">この練習をやり直す</button></div>
+      <div id="progress" class="step-progress" aria-label="進捗"></div>
+      <div class="workspace">
+        <section id="prompt-panel" class="panel prompt-panel"></section>
+        <aside id="board-panel" class="panel board-panel" aria-labelledby="board-title"></aside>
+        <section id="choices-panel" class="panel choices-panel"></section>
+        <section id="feedback-panel" class="feedback-panel" aria-live="polite" aria-atomic="true"></section>
+      </div>
+    </section>
+
+    <section id="completion" class="completion" hidden aria-labelledby="completion-title"></section>
+
+    <section class="principles" id="principles"><span>この練習で確かめること</span><p>条件を読み替える。候補を残す。<br class="mobile-break">「必ず」と「あり得る」を区別する。</p></section>
+  </main>
+  <footer class="wrap footer"><span class="footer-brand">ととのえる <small>無料試作版</small></span><p>独自の学習用問題です。特定の試験運営会社とは関係がなく、公式問題・本番の再現問題ではありません。<br>この練習の結果から、公式スコアや合否を予測するものではありません。</p></footer>
+
+  <dialog id="help-dialog"><button id="close-help" class="close-dialog" aria-label="使い方を閉じる">×</button><div class="eyebrow">HOW TO</div><h2>答えの前に、条件を整理。</h2><ol><li><strong>条件を読む</strong><p>「より前」「すぐ後」など、関係の違いに注目します。</p></li><li><strong>図や候補を選ぶ</strong><p>最初の練習は手順に沿って進みます。間違えたときは理由を読んで、もう一度選べます。</p></li><li><strong>自力で確かめる</strong><p>2題目では、すべての候補で成り立つ選択肢を選びます。</p></li></ol><p class="help-note">回答は送信されません。初回の正誤とやり直し回数は、開いている画面内だけで記録します。再読み込みすると記録は消えます。</p><button id="help-done" class="button primary">わかりました</button></dialog>
+
+  <script id="lesson-data" type="application/json">
+  {
+    "guided": {
+      "ids":["K","S","Y","R"],
+      "names":{"K":"カナ","S":"ソラ","Y":"ユイ","R":"レン"},
+      "title":"発表の順番をととのえる",
+      "intro":"4人が1人ずつ発表します。同じ順番になる人はいません。1番目から4番目までの並びを、条件から考えましょう。",
+      "constraints":[
+        {"type":"before","a":"K","b":"Y","text":"カナはユイより前に発表する。"},
+        {"type":"next","a":"S","b":"R","text":"レンはソラのすぐ後に発表する。"},
+        {"type":"notAt","a":"Y","at":3,"text":"ユイは4番目ではない。"}
+      ],
+      "steps":[
+        {"title":"「より前」を読み替える","task":"条件①と同じ意味になる説明を選んでください。","options":[
+          {"text":"カナが先、ユイが後。間にほかの人がいてもよい。","correct":true,"explanation":"その通りです。「より前」は先後関係だけを表します。カナとユイが隣り合う必要はありません。"},
+          {"text":"カナのすぐ次がユイになる。","correct":false,"explanation":"「より前」だけでは、隣とは決まりません。例えば「カナ → ソラ → ユイ → レン」も、この条件を満たします。","example":["K","S","Y","R"]},
+          {"text":"ユイが先、カナが後になる。","correct":false,"explanation":"前と後が逆です。条件は「カナが先、ユイが後」。例えば「カナ → ユイ → ソラ → レン」は認められます。","example":["K","Y","S","R"]}
+        ]},
+        {"title":"「すぐ後」をひとかたまりにする","task":"条件②を、どのように図へ移せばよいですか？","options":[
+          {"text":"ソラ → レンを隣り合う2人として扱う。","correct":true,"explanation":"正解です。「すぐ後」なので、間に別の人は入りません。先がソラ、後がレンです。"},
+          {"text":"ソラがレンより前なら、間が空いてもよい。","correct":false,"explanation":"「すぐ後」なので、間が空く並びは除外します。「カナ → ソラ → ユイ → レン」は条件①を満たしますが、条件②を満たしません。","example":["K","S","Y","R"]},
+          {"text":"レン → ソラを隣り合う2人として扱う。","correct":false,"explanation":"隣り合う点はよいですが、順番が逆です。例えば「カナ → ユイ → レン → ソラ」は条件①を満たしても、条件②を満たしません。","example":["K","Y","R","S"]}
+        ]},
+        {"title":"条件に反する候補を消す","task":"条件①②で残った3通りのうち、条件③によって除外できる並びをすべて選んでください。","kind":"eliminate"}
+      ]
+    },
+    "solo": {
+      "ids":["A","C","N","H"],
+      "names":{"A":"アオイ","C":"チカ","N":"ナオ","H":"ハル"},
+      "title":"決まらなくても、必ず言える？",
+      "intro":"4人が1人ずつ受付をします。同じ順番になる人はいません。次の2条件だけが分かっています。すべての並びで成り立つ選択肢を1つ選んでください。",
+      "constraints":[
+        {"type":"before","a":"A","b":"N","text":"アオイはナオより前である。"},
+        {"type":"next","a":"C","b":"H","text":"ハルはチカのすぐ後である。"}
+      ],
+      "options":[
+        {"text":"アオイは必ず1番目である。","claim":{"type":"at","a":"A","at":0}},
+        {"text":"ナオは必ず4番目である。","claim":{"type":"at","a":"N","at":3}},
+        {"text":"アオイは1番目か3番目である。","claim":{"type":"oneOf","a":"A","positions":[0,2]}},
+        {"text":"ハルは2番目ではない。","claim":{"type":"notAt","a":"H","at":1}}
+      ]
+    }
+  }
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
